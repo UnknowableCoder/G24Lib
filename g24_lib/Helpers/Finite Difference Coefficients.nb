@@ -1,0 +1,243 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8942,        235]
+NotebookOptionsPosition[      8554,        221]
+NotebookOutlinePosition[      8894,        236]
+CellTagsIndexPosition[      8851,        233]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"This", " ", "prints", " ", "to", " ", "fin_diff", 
+    RowBox[{"_coeffs", ".", "h"}], " ", "the", " ", "finite", " ", 
+    "difference", " ", "coefficients", " ", "for", " ", "several", " ", 
+    "derivative", " ", "orders", " ", "and", " ", "stencil", " ", 
+    RowBox[{"sizes", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"SetDirectory", "[", 
+     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"NumberListToString", "[", "list_", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "ret", "}"}], ",", 
+      RowBox[{
+       RowBox[{
+       "ret", "=", 
+        "\"\<      switch(i)\\n      {\\n       default:\\n        return \
+factor_type(0);\>\""}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Do", "[", 
+        RowBox[{
+         RowBox[{"ret", " ", "=", " ", 
+          RowBox[{"ret", "<>", "\"\<\\n       case \>\"", " ", "<>", " ", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"i", "-", "1"}], "]"}], "<>", 
+           "\"\<:\\n        return factor_type(\>\"", " ", "<>", " ", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"list", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "]"}], " ", "<>", " ", 
+           "\"\<);\>\""}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{"Length", "[", "list", "]"}]}], "}"}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", "ret", "]"}]}]}], "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Compactify", "[", "list_", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", " ", "maxden"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"x", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"Numerator", "@", "list"}], "/", 
+            RowBox[{"Denominator", "@", "list"}]}], " ", "*", " ", 
+           RowBox[{"Max", "@", 
+            RowBox[{"Denominator", "@", "list"}]}]}], ",", 
+          RowBox[{"Max", "@", 
+           RowBox[{"Denominator", "@", "list"}]}]}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"maxden", " ", "=", " ", 
+        RowBox[{"Max", "@", 
+         RowBox[{"Denominator", "@", "x"}]}]}], " ", ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{"maxden", ">", "1"}], ",", " ", 
+         RowBox[{
+          RowBox[{"maxden", " ", "=", " ", 
+           RowBox[{"Max", "@", 
+            RowBox[{"Denominator", "@", "x"}]}]}], " ", ";", " ", 
+          RowBox[{"x", " ", "=", " ", 
+           RowBox[{"x", "*", "maxden"}]}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", "x", "]"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"FinDiffCoeff", "[", 
+     RowBox[{"order_", ",", "offsetintervals_", ",", "nintervals_"}], "]"}], ":=", 
+    RowBox[{"CoefficientList", "[", 
+     RowBox[{
+      RowBox[{"Normal", "[", 
+       RowBox[{"Series", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"x", "^", "offsetintervals"}], "*", 
+          RowBox[{
+           RowBox[{"Log", "[", "x", "]"}], "^", "order"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "1", ",", "nintervals"}], "}"}]}], "]"}], "]"}], 
+      ",", "x"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"multiTaylor", "[", 
+     RowBox[{"f_", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"vars_", "?", "VectorQ"}], ",", 
+        RowBox[{"pt_", "?", "VectorQ"}], ",", 
+        RowBox[{"n_Integer", "?", "NonNegative"}]}], "}"}]}], "]"}], ":=", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Nest", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"vars", "-", "pt"}], ")"}], ".", "#"}], "&"}], ",", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"D", "[", 
+            RowBox[{"f", ",", 
+             RowBox[{"{", 
+              RowBox[{"vars", ",", "\[FormalK]"}], "}"}]}], "]"}], "/.", 
+           RowBox[{"Thread", "[", 
+            RowBox[{"vars", "\[Rule]", "pt"}], "]"}]}], ")"}], ",", 
+         "\[FormalK]"}], "]"}], "/", 
+       RowBox[{"\[FormalK]", "!"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[FormalK]", ",", "0", ",", "n"}], "}"}], ",", 
+      RowBox[{"Method", "\[Rule]", "\"\<Procedural\>\""}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Cplusplus", "[", 
+     RowBox[{"file_", ",", "order_", ",", "npoints_"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", "str"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"str", "=", 
+        RowBox[{
+        "\"\<\\n\\ntemplate<class indexer, class factor_type> struct\\n\>\"", 
+         " ", "<>", "\[IndentingNewLine]", 
+         "\"\<fin_diff_coeffs <indexer, factor_type, \>\"", " ", "<>", " ", 
+         RowBox[{"ToString", "[", "order", "]"}], " ", "<>", " ", 
+         "\"\<, \>\"", " ", "<>", " ", 
+         RowBox[{"ToString", "[", "npoints", "]"}], " ", "<>", " ", 
+         "\"\<>\\n\>\"", " ", "<>", "\[IndentingNewLine]", 
+         "\"\<{\\n  CUDA_HOS_DEV static constexpr bool valid()\\n  {\\n    \
+return true;\\n  }\\n  CUDA_HOS_DEV static constexpr factor_type coeffs(const \
+indexer i, const indexer offset = 0)\\n  {\\n    switch(offset)\\n    {\\n    \
+ default:\\n       return factor_type(0);\>\""}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Do", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"x", "=", 
+           RowBox[{"Compactify", "[", 
+            RowBox[{"FinDiffCoeff", "[", 
+             RowBox[{"order", ",", "off", ",", 
+              RowBox[{"npoints", "-", "1"}]}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", "    ", 
+          RowBox[{"str", " ", "=", " ", 
+           RowBox[{"str", " ", "<>", "\"\<\\n     case \>\"", "<>", 
+            RowBox[{"ToString", "[", "off", "]"}], "<>", 
+            "\"\<:\\n     {\\n\>\"", "<>", " ", 
+            RowBox[{"NumberListToString", "[", 
+             RowBox[{"x", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], " ", "<>", 
+            "\"\<\\n      }\\n     };\>\""}]}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"off", ",", "0", ",", 
+           RowBox[{"npoints", "-", "1"}]}], "}"}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"str", " ", "=", " ", 
+        RowBox[{
+        "str", " ", "<>", " ", 
+         "\"\<\\n    }\\n  }\\n  CUDA_HOS_DEV static constexpr factor_type \
+factor()\\n  {\\n    return factor_type(\>\"", " ", "<>", " ", 
+         RowBox[{"ToString", "[", 
+          RowBox[{"x", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "]"}], " ", "<>", " ", 
+         "\"\<);\\n  }\\n};\>\""}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"WriteString", "[", 
+        RowBox[{"file", ",", "str"}], "]"}], ";"}]}], "\[IndentingNewLine]", 
+     "]"}]}]}]}]], "Input",ExpressionUUID->"649cff4b-028c-4017-90ed-\
+0c30dac14140"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"fx", " ", "=", 
+   RowBox[{"OpenAppend", "[", 
+    RowBox[{"\"\<fin_diff_coeffs.h\>\"", ",", 
+     RowBox[{"CharacterEncoding", "\[Rule]", "\"\<UTF8\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"Cplusplus", "[", 
+    RowBox[{"fx", ",", "ord", ",", "np"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ord", ",", "1", ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"np", ",", 
+     RowBox[{"ord", "+", "1"}], ",", 
+     RowBox[{"ord", "+", "8"}]}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Close", "[", "fx", "]"}], ";"}]}], "Input",
+ NumberMarks->False,
+ CellLabel->"In[40]:=",ExpressionUUID->"d5e3561c-f3c3-4a78-963f-088714020be3"]
+},
+WindowSize->{624, 924},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 7245, 177, 943, "Input",ExpressionUUID->"649cff4b-028c-4017-90ed-0c30dac14140"],
+Cell[7806, 199, 744, 20, 67, "Input",ExpressionUUID->"d5e3561c-f3c3-4a78-963f-088714020be3"]
+}
+]
+*)
+
