@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['openmp_955',['OpenMP',['../structg24__lib_1_1_parallelism_1_1_open_m_p_1_1reduce__temporaries.html#a7e0228751109719fc7454e6ca95d7044',1,'g24_lib::Parallelism::OpenMP::reduce_temporaries']]],
+  ['operate_5ffunctor_956',['operate_functor',['../classg24__lib_1_1ndview.html#a778d88f113e731d7e4428db4fc2db271',1,'g24_lib::ndview']]],
+  ['operator_2a_957',['operator*',['../classg24__lib_1_1comp.html#ad040e3c5c8622d7b196b8ad696bfdf3d',1,'g24_lib::comp::operator*()'],['../classg24__lib_1_1fspoint.html#adca216443e6eda25c44dd84d86930e0c',1,'g24_lib::fspoint::operator*()'],['../classg24__lib_1_1point.html#a42cdf200aa37ba0c8a28f25e546d9dfb',1,'g24_lib::point::operator*()'],['../structg24__lib_1_1fraction.html#aed7aa37ad195b4eb3caed08e89421809',1,'g24_lib::fraction::operator*()']]],
+  ['operator_2b_958',['operator+',['../classg24__lib_1_1comp.html#a8d75365441b98ce7b791eb0ac2e6ed36',1,'g24_lib::comp']]],
+  ['operator_2d_959',['operator-',['../classg24__lib_1_1comp.html#a2d875b303d8f26f75c7d3b9a4cc6938c',1,'g24_lib::comp']]],
+  ['operator_2f_960',['operator/',['../classg24__lib_1_1comp.html#af7ffe18f7b46184ece56955178fb8ff8',1,'g24_lib::comp']]],
+  ['operator_3c_3c_961',['operator&lt;&lt;',['../classg24__lib_1_1coll.html#a7ce8e634bf75de1d9610d90c636b0026',1,'g24_lib::coll::operator&lt;&lt;()'],['../classg24__lib_1_1comp.html#a761459b978f7f05c9a0fe351b735ad10',1,'g24_lib::comp::operator&lt;&lt;()'],['../classg24__lib_1_1fspoint.html#ade8b089247e0d4dbea108e7d815cf80a',1,'g24_lib::fspoint::operator&lt;&lt;()'],['../classg24__lib_1_1internals_1_1ndview__printable.html#ae314dc50683bc99878e8131af315465c',1,'g24_lib::internals::ndview_printable::operator&lt;&lt;()'],['../classg24__lib_1_1point.html#ae33373434a9a1b4a60b19ffc9eceb9ed',1,'g24_lib::point::operator&lt;&lt;()'],['../structg24__lib_1_1fraction.html#aa8468898e03494fafd5d075d81299bf3',1,'g24_lib::fraction::operator&lt;&lt;()']]],
+  ['operator_3e_3e_962',['operator&gt;&gt;',['../classg24__lib_1_1comp.html#a32989dd67d286839800108cf86ae3f90',1,'g24_lib::comp::operator&gt;&gt;()'],['../classg24__lib_1_1fspoint.html#a38e527de4a8bc6c3de836cd976bd4dc8',1,'g24_lib::fspoint::operator&gt;&gt;()']]],
+  ['ortog_963',['ortog',['../classg24__lib_1_1fspoint.html#acd3ad6093fc033fd216b38328923601c',1,'g24_lib::fspoint::ortog()'],['../classg24__lib_1_1point.html#a3b9038436f43b64ff90b7e33efc6c220',1,'g24_lib::point::ortog()']]]
+];
