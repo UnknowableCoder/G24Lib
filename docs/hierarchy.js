@@ -1,0 +1,98 @@
+var hierarchy =
+[
+    [ "g24_lib::view::all", "structg24__lib_1_1view_1_1all.html", null ],
+    [ "g24_lib::internals::any_sized_int< size, with_sign >", "structg24__lib_1_1internals_1_1any__sized__int.html", null ],
+    [ "g24_lib::Parallelism::None::atomics", "structg24__lib_1_1_parallelism_1_1_none_1_1atomics.html", null ],
+    [ "g24_lib::Parallelism::OpenMP::atomics", "structg24__lib_1_1_parallelism_1_1_open_m_p_1_1atomics.html", null ],
+    [ "g24_lib::Parallelism::CUDA< estimator, BlockSize >::atomics", "structg24__lib_1_1_parallelism_1_1_c_u_d_a_1_1atomics.html", null ],
+    [ "g24_lib::Parallelism::parallelism_base::atomics", "structg24__lib_1_1_parallelism_1_1parallelism__base_1_1atomics.html", null ],
+    [ "g24_lib::CUDA_kernel_size::estimator::automatic", "structg24__lib_1_1_c_u_d_a__kernel__size_1_1estimator_1_1automatic.html", null ],
+    [ "g24_lib::exceptions::base_exception", "structg24__lib_1_1exceptions_1_1base__exception.html", [
+      [ "g24_lib::exceptions::array_length_misread", "structg24__lib_1_1exceptions_1_1array__length__misread.html", null ],
+      [ "g24_lib::exceptions::input_error", "structg24__lib_1_1exceptions_1_1input__error.html", null ],
+      [ "g24_lib::exceptions::memory_manager_error", "structg24__lib_1_1exceptions_1_1memory__manager__error.html", null ],
+      [ "g24_lib::exceptions::out_of_bounds_access", "structg24__lib_1_1exceptions_1_1out__of__bounds__access.html", null ],
+      [ "g24_lib::exceptions::output_error", "structg24__lib_1_1exceptions_1_1output__error.html", null ],
+      [ "g24_lib::exceptions::undefined_derivative", "structg24__lib_1_1exceptions_1_1undefined__derivative.html", null ],
+      [ "g24_lib::exceptions::undefined_dimensions", "structg24__lib_1_1exceptions_1_1undefined__dimensions.html", null ],
+      [ "g24_lib::exceptions::undefined_operation", "structg24__lib_1_1exceptions_1_1undefined__operation.html", null ]
+    ] ],
+    [ "g24_lib::CUDA_kernel_size::estimator::basic", "structg24__lib_1_1_c_u_d_a__kernel__size_1_1estimator_1_1basic.html", null ],
+    [ "g24_lib::carried_bool_vector< Block, indexer, memory_manager, default_is_copy >::bool_accessor", "structg24__lib_1_1carried__bool__vector_1_1bool__accessor.html", null ],
+    [ "g24_lib::view::border", "structg24__lib_1_1view_1_1border.html", null ],
+    [ "g24_lib::internals::butcher_entry_class< factorT, eval_gen, frac_gens >", "structg24__lib_1_1internals_1_1butcher__entry__class.html", null ],
+    [ "g24_lib::internals::butcher_final_class< factorT, frac_gens >", "structg24__lib_1_1internals_1_1butcher__final__class.html", null ],
+    [ "g24_lib::internals::butcher_table< butcher_final_like, butcher_entry_likes >", "structg24__lib_1_1internals_1_1butcher__table.html", null ],
+    [ "g24_lib::internals::butcher_table< butcher_final_like >", "structg24__lib_1_1internals_1_1butcher__table_3_01butcher__final__like_01_4.html", null ],
+    [ "g24_lib::internals::butcher_table_extended< butcher_final_like1, butcher_final_like2, butcher_entry_likes >", "structg24__lib_1_1internals_1_1butcher__table__extended.html", null ],
+    [ "g24_lib::carried_bool_vector< Block, indexer, memory_manager, default_is_copy >", "classg24__lib_1_1carried__bool__vector.html", null ],
+    [ "g24_lib::class_info< T, ignore >", "structg24__lib_1_1class__info.html", null ],
+    [ "g24_lib::coll< Type, indexer >", "classg24__lib_1_1coll.html", null ],
+    [ "g24_lib::comp< Type >", "classg24__lib_1_1comp.html", null ],
+    [ "g24_lib::NonMatrixLinearSolvers::KrylovMethods::ConjugateGradient< parallelism_type >", "classg24__lib_1_1_non_matrix_linear_solvers_1_1_krylov_methods_1_1_conjugate_gradient.html", null ],
+    [ "g24_lib::split_member_array< Type, indexer, memory_manager_type, default_is_copy >::const_split_member_accessor", "structg24__lib_1_1split__member__array_1_1const__split__member__accessor.html", null ],
+    [ "g24_lib::constexpr_fraction< factorT, num, den >", "structg24__lib_1_1constexpr__fraction.html", null ],
+    [ "g24_lib::Parallelism::CUDA< estimator, BlockSize >", "structg24__lib_1_1_parallelism_1_1_c_u_d_a.html", null ],
+    [ "g24_lib::CUDA_kernel_size::estimator::cuda_kernel_estimator_base", "structg24__lib_1_1_c_u_d_a__kernel__size_1_1estimator_1_1cuda__kernel__estimator__base.html", null ],
+    [ "g24_lib::Definitions", "structg24__lib_1_1_definitions.html", null ],
+    [ "g24_lib::derivator< indexer, factorT, ord, npoints >", "classg24__lib_1_1derivator.html", null ],
+    [ "g24_lib::dummy_function", "structg24__lib_1_1dummy__function.html", null ],
+    [ "g24_lib::dummy_void_function", "structg24__lib_1_1dummy__void__function.html", null ],
+    [ "g24_lib::empty_array< Type, indexer >", "structg24__lib_1_1empty__array.html", null ],
+    [ "g24_lib::internals::empty_kernel_size", "structg24__lib_1_1internals_1_1empty__kernel__size.html", null ],
+    [ "g24_lib::internals::fin_diff_coeffs< indexer, factor_type, order, npoints >", "structg24__lib_1_1internals_1_1fin__diff__coeffs.html", null ],
+    [ "g24_lib::fixed_return_array< Type, indexer >", "structg24__lib_1_1fixed__return__array.html", null ],
+    [ "flat_imitation_impl", null, [
+      [ "g24_lib::flat_imitation_struct< T >", "structg24__lib_1_1flat__imitation__struct.html", null ]
+    ] ],
+    [ "g24_lib::fraction< factorT >", "structg24__lib_1_1fraction.html", null ],
+    [ "g24_lib::fspoint< Type, indexer, Size >", "classg24__lib_1_1fspoint.html", null ],
+    [ "g24_lib::fspoint< indexer, indexer, dim >", "classg24__lib_1_1fspoint.html", null ],
+    [ "g24_lib::identity_functor", "structg24__lib_1_1identity__functor.html", null ],
+    [ "g24_lib::view::interior", "structg24__lib_1_1view_1_1interior.html", null ],
+    [ "g24_lib::CUDA_kernel_size::kernel_size_type", "structg24__lib_1_1_c_u_d_a__kernel__size_1_1kernel__size__type.html", null ],
+    [ "g24_lib::managed_object< Type, indexer, memory_manager, default_is_copy >", "classg24__lib_1_1managed__object.html", null ],
+    [ "g24_lib::view::max", "structg24__lib_1_1view_1_1max.html", null ],
+    [ "g24_lib::MemoryContext::memory_context_base", "structg24__lib_1_1_memory_context_1_1memory__context__base.html", [
+      [ "g24_lib::MemoryContext::CPU", "structg24__lib_1_1_memory_context_1_1_c_p_u.html", null ],
+      [ "g24_lib::MemoryContext::CUDA_GPU", "structg24__lib_1_1_memory_context_1_1_c_u_d_a___g_p_u.html", null ]
+    ] ],
+    [ "g24_lib::memory_manager_base< Type, indexer >", "structg24__lib_1_1memory__manager__base.html", null ],
+    [ "g24_lib::memory_manager_base< Type, g24_lib::Definitions::default_unsigned_indexer >", "structg24__lib_1_1memory__manager__base.html", [
+      [ "g24_lib::CUDA_memory_manager< Type, indexer >", "structg24__lib_1_1_c_u_d_a__memory__manager.html", null ],
+      [ "g24_lib::default_memory_manager< Type, indexer >", "structg24__lib_1_1default__memory__manager.html", null ]
+    ] ],
+    [ "g24_lib::view::min", "structg24__lib_1_1view_1_1min.html", null ],
+    [ "g24_lib::ndview< indexer, dim, skipped >", "classg24__lib_1_1ndview.html", null ],
+    [ "g24_lib::internals::ndview_printable< ArrT, indexer, dim, skipped >", "classg24__lib_1_1internals_1_1ndview__printable.html", null ],
+    [ "nested_imitation_impl", null, [
+      [ "g24_lib::nested_imitation_struct< T >", "structg24__lib_1_1nested__imitation__struct.html", null ]
+    ] ],
+    [ "g24_lib::operation_array< Op, indexer >", "structg24__lib_1_1operation__array.html", null ],
+    [ "g24_lib::Parallelism::parallelism_base", "structg24__lib_1_1_parallelism_1_1parallelism__base.html", [
+      [ "g24_lib::Parallelism::None", "structg24__lib_1_1_parallelism_1_1_none.html", null ],
+      [ "g24_lib::Parallelism::OpenMP", "structg24__lib_1_1_parallelism_1_1_open_m_p.html", null ]
+    ] ],
+    [ "g24_lib::point< Type, indexer >", "classg24__lib_1_1point.html", null ],
+    [ "g24_lib::point< g24_lib::Definitions::default_unsigned_indexer, g24_lib::Definitions::default_unsigned_indexer >", "classg24__lib_1_1point.html", null ],
+    [ "g24_lib::view::range< indexer >", "structg24__lib_1_1view_1_1range.html", null ],
+    [ "g24_lib::Parallelism::OpenMP::reduce_temporaries< T, indexer >", "structg24__lib_1_1_parallelism_1_1_open_m_p_1_1reduce__temporaries.html", null ],
+    [ "g24_lib::Parallelism::parallelism_base::reduce_temporaries< T, indexer >", "structg24__lib_1_1_parallelism_1_1parallelism__base_1_1reduce__temporaries.html", null ],
+    [ "g24_lib::Parallelism::None::reduce_temporaries< T, indexer >", "structg24__lib_1_1_parallelism_1_1_none_1_1reduce__temporaries.html", null ],
+    [ "g24_lib::NonMatrixLinearSolvers::KrylovMethods::ConjugateGradient< parallelism_type >::results< Obj >", "structg24__lib_1_1_non_matrix_linear_solvers_1_1_krylov_methods_1_1_conjugate_gradient_1_1results.html", null ],
+    [ "g24_lib::return_ith_functor", "structg24__lib_1_1return__ith__functor.html", null ],
+    [ "g24_lib::set_ith_functor", "structg24__lib_1_1set__ith__functor.html", null ],
+    [ "g24_lib::simple_array< Type, indexer, memory_manager, default_is_copy >", "classg24__lib_1_1simple__array.html", null ],
+    [ "g24_lib::simple_array< Block, g24_lib::Definitions::default_unsigned_indexer, default_memory_manager< Block, g24_lib::Definitions::default_unsigned_indexer >, true >", "classg24__lib_1_1simple__array.html", null ],
+    [ "g24_lib::simple_evolve_result< diffT, errorT, timeT >", "structg24__lib_1_1simple__evolve__result.html", null ],
+    [ "split_array_helper", null, [
+      [ "g24_lib::split_member_array< Type, indexer, memory_manager_type, default_is_copy >", "structg24__lib_1_1split__member__array.html", null ]
+    ] ],
+    [ "g24_lib::split_member_array< Type, indexer, memory_manager_type, default_is_copy >::split_member_accessor", "structg24__lib_1_1split__member__array_1_1split__member__accessor.html", null ],
+    [ "g24_lib::NonMatrixLinearSolvers::KrylovMethods::ConjugateGradient< parallelism_type >::storage< Obj >", "classg24__lib_1_1_non_matrix_linear_solvers_1_1_krylov_methods_1_1_conjugate_gradient_1_1storage.html", null ],
+    [ "g24_lib::temporal_evolver< butcher_tableau, defer_by_value >", "classg24__lib_1_1temporal__evolver.html", null ],
+    [ "g24_lib::internals::temporal_evolver_storage< object, butcher_tableau >", "structg24__lib_1_1internals_1_1temporal__evolver__storage.html", null ],
+    [ "g24_lib::internals::trivial_updater_functor", "structg24__lib_1_1internals_1_1trivial__updater__functor.html", null ],
+    [ "g24_lib::value_padded_array< Cont, by_ref, Val, indexer >", "structg24__lib_1_1value__padded__array.html", null ],
+    [ "g24_lib::wildcard", "structg24__lib_1_1wildcard.html", null ]
+];
